@@ -157,12 +157,12 @@ export const authenticate = async (formData) => {
   const { username, password } = Object.fromEntries(formData);
   //console.log(formData);
   try {
-    await signIn("credentials", { username, password, redirect: false });
+    await signIn("credentials", { username, password });
   } catch (err) {
     console.log(err);
     throw err;
   }
-  redirect("/dashboard"); //manually redirect
+  //redirect("/dashboard"); //manually redirect
 };
 //
 // };
